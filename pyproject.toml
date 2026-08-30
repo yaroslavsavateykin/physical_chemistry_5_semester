@@ -1,0 +1,27 @@
+[project]
+name = "physchem-practicum"
+version = "0.1.0"
+description = "Практикум по физической химии (5 семестр): обработка данных, регрессии (uncertainty-tools), численное интегрирование кинетических ОДУ (scipy)"
+requires-python = ">=3.12"
+dependencies = [
+    "uncertainty-tools==0.1.3",
+    "numpy",
+    "scipy",
+    "pandas",
+    "matplotlib",
+    "ipykernel",
+]
+
+[tool.uv]
+package = false
+
+[tool.uv.pip]
+index-url = "https://pypi.org/simple"
+
+[dependency-groups]
+dev = [
+    "ipykernel>=7.3.0",
+    "jupyter>=1.1.1",
+    "jupyter-client>=8.9.1",
+    "nbconvert>=7.17.1",
+]
